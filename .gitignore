@@ -1,5 +1,6 @@
 .ipynb_checkpoints
 *.xlsx
+src/models/class/*.ipynb
 *.csv
 *.pickle
 *.json
