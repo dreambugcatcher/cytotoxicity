@@ -4,3 +4,4 @@ src/models/class/*.ipynb
 *.csv
 *.pickle
 *.json
+__pycache__
