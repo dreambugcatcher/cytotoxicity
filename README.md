@@ -6,10 +6,10 @@ and machine learning models.
 ## Features
 - RDKit molecular descriptors
 - Data preprocessing pipeline
-- Random Forest / XGBoost models
+- Random Forest / XGBoost / SVM models
 - Cross-validation
 - Model evaluation
-- SHAP interpretability
+- GUI app, docker implementation
 
 ## Tech stack
 - Python
@@ -17,21 +17,40 @@ and machine learning models.
 - scikit-learn
 - pandas
 - matplotlib
+- gradio
 
 ## Results
 
-| Model | ROC-AUC |
-|---|---|
-| Random Forest | 0.84 |
-| XGBoost | 0.87 |
+- High classification indicators
 
 ## Installation
 
+### For direct use
+```
+conda create -n cytotox_env
+conda activate cytotox_env
+
 pip install -r requirements.txt
+```
+
+### For docker use
+```
+docker build . -t cytotox
+```
 
 ## Usage
 
-python train.py
+### For direct use
+```
+python project_folder/src/frontend/main.py
+```
+
+### For docker use
+```
+docker run [-it/-d] -p 5000:5000 cytotox
+```
+
+### Then you can use it for prediction on ```localhost:5000``` or wherever you specify in the file main.py
 
 ## Example
 
